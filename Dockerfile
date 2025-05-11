@@ -1,6 +1,6 @@
-FROM python:3.11.12-bookworm
+FROM python:3.11-alpine
 
-RUN useradd -m -d /home/app app
+RUN adduser -S app -h /home/app
 USER app
 
 ENV PATH="${PATH}:/home/app/.local/bin"
